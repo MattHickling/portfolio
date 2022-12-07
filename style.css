@@ -1,17 +1,18 @@
 header{
     display: flex;
-    flex-direction: row;
     align-items: stretch;
     min-height: 168px;
     background-color: rgb(0, 0, 0);
     color: white;
     justify-content: center;
+    flex-shrink: 0;
+    flex-grow: 1;
+    
 }
 
 div.name{
     display: flex;
     flex-direction: column;  
-    background-repeat: no-repeat;
     /*background: linear-gradient(#e66465, #9198e5);*/
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
@@ -31,9 +32,7 @@ h1{
     max-width: 80%;
     max-height: 0%;
     margin-top: 10rem;
-    margin-bottom: 2rem;
-  
-  
+    margin-bottom: 2rem; 
 }
 
 h2{
@@ -42,8 +41,7 @@ h2{
     align-self: center;
     justify-content: flex-start;
     margin-top: 4rem;
-   
-    
+    flex-wrap: wrap;  
 }
 
 
@@ -138,18 +136,16 @@ button a {
 form{
     margin-top: 5%;
     font-size: 1.5rem;
-    width: 50%;
+    width: 40%;
 }
 
 input[type=text], select, textarea {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */ 
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 10px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+    width: 100%; 
+    padding: 12px;   
+    box-sizing: border-box; 
+    margin-top: 10px;
+    margin-bottom: 16px; 
+    resize: vertical; 
     
   }
   
@@ -157,10 +153,14 @@ input[type=text], select, textarea {
   input[type=submit] {
     background-color: #04AA6D;
     color: white;
-    padding: 12px 20px;
+    padding: 16px 30px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    max-width: 100%;
+    height: 4rem;
+    width: 7rem;
+    font-size: 1.2rem;
     
   }
   
@@ -169,11 +169,14 @@ input[type=text], select, textarea {
     background-color: #45a049;
   }
   
-  /* Add a background color and some padding around the form */
+ 
   .container {
     border-radius: 5px;
     background: linear-gradient(0.25turn, #3f87a6, #84d149, #f69d3c);;
-    padding: 50px;
+    /*padding: 50px;*/
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
   }
 
   #email{
@@ -197,6 +200,7 @@ input[type=text], select, textarea {
     display: flex;
     justify-content: center;
     margin-top: -0%;  
+    font-size: 3.8rem;
   }
 
   main#about_me h1{
@@ -204,15 +208,50 @@ input[type=text], select, textarea {
   }
 
   div.container{
+   
+    flex-direction: column;
+    min-width: 100%;
+    height: 100%; 
+  }
+
+  footer.contact{
+    color: white;
+    height: 8.5rem;
+    text-align: center;
     display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  
+  footer.portfolio{
+    color: white;
+    height: 8.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+ 
+  footer.about{
+    color: white;
+    height: 8.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
   }
 
   h1.contact{
-    margin-top: 0%;
-    height: 8rem;
-    
+    font-size: 3.8rem;
   }
+
+  h1#about{
+    font-size: 3.8rem;
+
+  }
+
+ 
